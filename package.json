@@ -1,0 +1,11 @@
+{
+  "name": "icyBot",
+  "version": "1.0.0",
+  "description": "Best bot",
+  "main": "bot.js",
+  "author": "Philippe Chartrand",
+  "dependencies": {
+    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "winston": "^3.2.1"
+  }
+}
