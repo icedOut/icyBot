@@ -4,9 +4,11 @@ const client = new Discord.Client();
 const { Client, Attachment } = require('discord.js');
 const querystring = require('querystring');
 const r2          = require('r2');
+const { get } = require("snekfetch");
 
 const DOG_API_URL   = "https://api.thedogapi.com/"
 const DOG_API_KEY   = "97bccc14-dd2b-408d-b162-c3db4d60cd33"; // get a free key from - https://thedogapi.com/signup
+const CAT_API_KEY   =  "70b47e3b-2a11-40dd-93e0-64188b5fdd04";
 const DISCORD_TOKEN = 'NjQyODU4ODE4MTQwODk3MzA1.XcdN6Q.PuY0odzjQCARg2xThPMNuTHUv2s';
 
 client.on('ready', () => {
@@ -21,13 +23,15 @@ client.on('message', msg => {
 		   break;
 	   
 	  case '!cat':
-		 // Create the attachment using Attachment
-        const cat1 = new Attachment('https://i.imgur.com/SGfRJG7.jpg');
-		const cat2 = new Attachment('https://i.imgur.com/SSN26nN.jpg');
-		var myArray = [cat1 , cat2]
-		var rand = myArray[Math.floor(Math.random() * myArray.length)];
-        // Send the attachment in the message channel
-        msg.channel.send(rand);
+		try {
+			get('https://aws.random.cat/meow').then(res => {
+				const embed = new Discord.RichEmbed()
+				.setImage(res.body.file)
+				return msg.channel.send({embed});
+			});
+		} catch(err) {
+			return msg.channel.send(err.stack);
+		}
 		break;
 		
 	  case '!dog':
