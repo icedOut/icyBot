@@ -1,7 +1,13 @@
 module.exports = {
-	name: 'ping',
-	description: 'Ping!',
+	name: 'commands',
+	description: 'List of available commands',
 	execute(message, args) {
-		message.channel.send('Pong.');
+		message.channel.send('List of Available commands : 
+							  - ping
+							  - cat
+							  - dog
+							  - play |YOUTUBE URL|
+							  - stop
+							  - skip');
 	},
 };

@@ -10,5 +10,6 @@
 
 
 
-### Hh3 Author: 
-Philippe Chartrand
+###  Author: 
+Philippe Chartrand - philippe-chartrand@hotmail.com
+

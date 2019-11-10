@@ -53,6 +53,9 @@ client.on('message',  async msg => {
 	  case '!dog':
 			client.commands.get('dog').execute(msg, args);
 			break;
+	  case '!commands':
+			client.commands.get('commands').execute(msg, args);
+			break;
 			
   }
   if (msg.content.startsWith(`${prefix}play`)) {
@@ -64,9 +67,7 @@ client.on('message',  async msg => {
 	} else if (msg.content.startsWith(`${prefix}stop`)) {
 		stop(msg, serverQueue);
 		return;
-	} else {
-		msg.channel.send('You need to enter a valid command!')
-	}
+	} 
 });
   
 
