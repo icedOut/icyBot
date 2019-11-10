@@ -1,6 +1,8 @@
 ### Install packages: 
--npm install discord.io 
--ffmpeg ( Music function)
+-npm install discord.js
+
+
+-ffmpeg https://www.ffmpeg.org/
 
 				  
 ### Run bot :
