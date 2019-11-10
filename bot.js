@@ -56,6 +56,9 @@ client.on('message',  async msg => {
 	  case '!commands':
 			client.commands.get('commands').execute(msg, args);
 			break;
+	  case '!lol':
+			client.commands.get('lol').execute(msg, args);
+			break;
 			
   }
   if (msg.content.startsWith(`${prefix}play`)) {

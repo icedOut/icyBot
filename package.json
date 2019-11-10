@@ -8,8 +8,10 @@
     "discord.io": "github:woor/discord.io#gateway_v6",
     "discord.js": "^11.5.1",
     "ffmpeg": "0.0.4",
+    "kayn": "^0.10.2",
     "opusscript": "0.0.7",
     "r2": "^2.0.1",
+    "riot-api-nodejs": "^2.1.0",
     "snekfetch": "^4.0.4",
     "winston": "^3.2.1",
     "ytdl-core": "^1.0.0"
