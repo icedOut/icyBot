@@ -1,12 +1,12 @@
-#h3 Install packages: 
+### Install packages: 
 -npm install discord.io 
 -ffmpeg ( Music function)
 
 				  
-#h3 Run bot :
+### Run bot :
  -node bot.js
 
 
 
-#h3 Author: 
+### Hh3 Author: 
 Philippe Chartrand
