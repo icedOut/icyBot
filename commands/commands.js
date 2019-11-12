@@ -8,6 +8,7 @@ ex.addField('!play  - Your search - '  , ' Searches youtube with the argument pr
 ex.addField('!stop' , ' Stops the musicbot')
 ex.addField('!pause' , ' Pauses the music')
 ex.addField('!ping' , 'pong')
+ex.addField('!opgg -LOL username -  (no space)' , 'Searches OP.gg with username provided in argument. Do not add spaces in the ID search' )
 module.exports = {
 	name: 'commands',
 	description: 'List of available commands',

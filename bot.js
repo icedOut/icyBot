@@ -40,24 +40,24 @@ client.on('message',  async msg => {
 	const args = msg.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
 	const serverQueue = queue.get(msg.guild.id);
-  switch (msg.content){
+  switch (command){
 	  
-	  case '!ping':
+	  case 'ping':
 		   client.commands.get('ping').execute(msg, args);
 		   break;
 	   
-	  case '!cat':	
+	  case 'cat':	
 			client.commands.get('cat').execute(msg, args);
 			break;
 		
-	  case '!dog':
+	  case 'dog':
 			client.commands.get('dog').execute(msg, args);
 			break;
-	  case '!commands':
+	  case 'commands':
 			client.commands.get('commands').execute(msg, args);
 			break;
-	  case '!lol':
-			client.commands.get('lol').execute(msg, args);
+	  case 'opgg':
+			client.commands.get('opgg').execute(msg, args);
 			break;
 			
   }

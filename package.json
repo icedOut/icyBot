@@ -9,6 +9,8 @@
     "discord.js": "^11.5.1",
     "ffmpeg": "0.0.4",
     "kayn": "^0.10.2",
+    "openurl": "^1.1.1",
+    "opn": "^6.0.0",
     "opusscript": "0.0.7",
     "r2": "^2.0.1",
     "riot-api-nodejs": "^2.1.0",
