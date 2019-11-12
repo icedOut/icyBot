@@ -86,9 +86,12 @@ async function execute(message, serverQueue) {
 
 
 const ytSearch = require( 'yt-search' )
-
-
-var recherche = "" + args[1]+args[2]+args[3]+args[4]+args[5]
+var i ;
+var recherche = "";
+for ( i = 1 ; i < args.length ; i++){
+if (typeof args[i] !== 'undefined')	
+recherche = recherche + args[i]
+}
 var x = ytSearch( recherche, function ( err, r ) {
   if ( err ) throw err
  
@@ -113,6 +116,7 @@ var x = ytSearch( recherche, function ( err, r ) {
 		};
 		queue.set(message.guild.id, queueContruct);
 		queueContruct.songs.push(song);
+		message.channel.send(`${song.title} has been added to the queue!`);
 		
 
 		try {
