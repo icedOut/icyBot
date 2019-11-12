@@ -87,7 +87,8 @@ async function execute(message, serverQueue) {
 
 const ytSearch = require( 'yt-search' )
 
-var recherche = args[1]
+
+var recherche = "" + args[1]+args[2]+args[3]+args[4]+args[5]
 var x = ytSearch( recherche, function ( err, r ) {
   if ( err ) throw err
  
@@ -128,21 +129,11 @@ var x = ytSearch( recherche, function ( err, r ) {
 		console.log(serverQueue.songs);
 		return message.channel.send(`${song.title} has been added to the queue!`);
 	}
-
-
-	
-
 }
   
 } );
 
 }
-
-
-
-
-	
-	
 
 function skip(message, serverQueue) {
 	if (!message.member.voiceChannel) return message.channel.send('You have to be in a voice channel to stop the music!');
