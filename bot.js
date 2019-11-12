@@ -86,9 +86,9 @@ async function execute(message, serverQueue) {
 
 
 const ytSearch = require( 'yt-search' )
-let firstResult = null;
- var recherche;
-var x = ytSearch( 'superman theme', function ( err, r ) {
+
+var recherche = args[1]
+var x = ytSearch( recherche, function ( err, r ) {
   if ( err ) throw err
  
   const videos = r.videos
@@ -96,17 +96,12 @@ var x = ytSearch( 'superman theme', function ( err, r ) {
   const accounts = r.accounts
  
   const firstResult = videos[ 0 ]
-  recherche = firstResult
- console.log(firstResult)
-  return firstResult
-  
-} );
-console.log(firstResult)
-
-
-
-	
-	if (!serverQueue) {
+  connection(firstResult)
+ 
+ 
+ async function connection(song){
+	 
+ if (!serverQueue) {
 		const queueContruct = {
 			textChannel: message.channel,
 			voiceChannel: voiceChannel,
@@ -138,6 +133,16 @@ console.log(firstResult)
 	
 
 }
+  
+} );
+
+}
+
+
+
+
+	
+	
 
 function skip(message, serverQueue) {
 	if (!message.member.voiceChannel) return message.channel.send('You have to be in a voice channel to stop the music!');
