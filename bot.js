@@ -82,14 +82,30 @@ async function execute(message, serverQueue) {
 	if (!permissions.has('CONNECT') || !permissions.has('SPEAK')) {
 		return message.channel.send('I need the permissions to join and speak in your voice channel!');
 	}
-	
-	const songInfo = await ytdl.getInfo(args[1]);
-	console.log(args[1])
-	const song = {
-		title: songInfo.title,
-		url: songInfo.video_url,
-	};
+	 
 
+
+const ytSearch = require( 'yt-search' )
+let firstResult = null;
+ var recherche;
+var x = ytSearch( 'superman theme', function ( err, r ) {
+  if ( err ) throw err
+ 
+  const videos = r.videos
+  const playlists = r.playlists
+  const accounts = r.accounts
+ 
+  const firstResult = videos[ 0 ]
+  recherche = firstResult
+ console.log(firstResult)
+  return firstResult
+  
+} );
+console.log(firstResult)
+
+
+
+	
 	if (!serverQueue) {
 		const queueContruct = {
 			textChannel: message.channel,
@@ -99,10 +115,9 @@ async function execute(message, serverQueue) {
 			volume: 5,
 			playing: true,
 		};
-
 		queue.set(message.guild.id, queueContruct);
-
 		queueContruct.songs.push(song);
+		
 
 		try {
 			var connection = await voiceChannel.join();
@@ -113,11 +128,14 @@ async function execute(message, serverQueue) {
 			queue.delete(message.guild.id);
 			return message.channel.send(err);
 		}
-	} else {
+} else {
 		serverQueue.songs.push(song);
 		console.log(serverQueue.songs);
 		return message.channel.send(`${song.title} has been added to the queue!`);
 	}
+
+
+	
 
 }
 

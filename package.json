@@ -14,6 +14,8 @@
     "riot-api-nodejs": "^2.1.0",
     "snekfetch": "^4.0.4",
     "winston": "^3.2.1",
+    "youtube-search": "^1.1.4",
+    "yt-search": "^0.4.1",
     "ytdl-core": "^1.0.0"
   }
 }
