@@ -1,6 +1,6 @@
 {
   "name": "icyBot",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Best bot",
   "main": "bot.js",
   "author": "Philippe Chartrand",
@@ -13,6 +13,7 @@
     "opn": "^6.0.0",
     "opusscript": "0.0.7",
     "r2": "^2.0.1",
+    "random-text-meme": "^1.1.9",
     "riot-api-nodejs": "^2.1.0",
     "snekfetch": "^4.0.4",
     "winston": "^3.2.1",

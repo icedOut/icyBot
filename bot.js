@@ -70,6 +70,10 @@ client.on('message',  async msg => {
 			break;
 			case 'babydeck':
 			client.commands.get('babydeck').execute(msg, args);
+			break;
+	  case 'tableflip':
+			client.commands.get('tableflip').execute(msg, args);
+			break;
 
 		
   }
