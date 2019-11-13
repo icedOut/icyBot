@@ -68,6 +68,9 @@ client.on('message',  async msg => {
 	  case 'mad':
 			client.commands.get('mad').execute(msg, args);
 			break;
+			case 'babydeck':
+			client.commands.get('babydeck').execute(msg, args);
+
 		
   }
   if (msg.content.startsWith(`${prefix}play`)) {

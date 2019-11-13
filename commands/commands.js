@@ -11,6 +11,7 @@ ex.addField('!ping' , 'pong')
 ex.addField('!cena' ,  'AND HIS NAME IS JOHHHHHHHHN CENA')
 ex.addField('!triple' , 'Ohhhhh baby a triple')
 ex.addField('!mad' , ' Y u hef 2 b med?!?!')
+ex.addField('!babydeck', 'e-dating is a sin')
 
 module.exports = {
 	name: 'commands',
