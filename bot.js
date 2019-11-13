@@ -59,7 +59,16 @@ client.on('message',  async msg => {
 	  case 'opgg':
 			client.commands.get('opgg').execute(msg, args);
 			break;
-			
+	  case 'cena':
+			client.commands.get('cena').execute(msg, args);
+			break;
+	  case 'triple':
+			client.commands.get('triple').execute(msg, args);
+			break;
+	  case 'mad':
+			client.commands.get('mad').execute(msg, args);
+			break;
+		
   }
   if (msg.content.startsWith(`${prefix}play`)) {
 		execute(msg, serverQueue);

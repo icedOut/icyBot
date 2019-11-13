@@ -9,6 +9,10 @@ ex.addField('!stop' , ' Stops the musicbot')
 ex.addField('!skip' , ' skips to the  the song in queue')
 ex.addField('!ping' , 'pong')
 ex.addField('!opgg -LOL username -  (no space)' , 'Searches OP.gg with username provided in argument. Do not add spaces in the ID search' )
+ex.addField('!cena' ,  'AND HIS NAME IS JOHHHHHHHHN CENA')
+ex.addField('!triple' , 'Ohhhhh baby a triple')
+ex.addField('!mad' , ' Y u hef 2 b med?!?!')
+
 module.exports = {
 	name: 'commands',
 	description: 'List of available commands',
