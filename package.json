@@ -1,6 +1,6 @@
 {
   "name": "icyBot",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Best bot",
   "main": "bot.js",
   "author": "Philippe Chartrand",

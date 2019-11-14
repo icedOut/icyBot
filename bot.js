@@ -74,8 +74,9 @@ client.on('message',  async msg => {
 	  case 'tableflip':
 			client.commands.get('tableflip').execute(msg, args);
 			break;
-
-		
+	  case 'emoji':
+			  client.commands.get('emoji').execute(msg, args);
+			  break;
   }
   if (msg.content.startsWith(`${prefix}play`)) {
 		execute(msg, serverQueue);

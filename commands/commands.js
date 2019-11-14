@@ -8,6 +8,7 @@ ex.addField('!play  - Your search - '  , ' Searches youtube with the argument pr
 ex.addField('!stop' , ' Stops the musicbot')
 ex.addField('!skip' , ' skips to the  the song in queue')
 ex.addField('!tableflip' , 'Flip that table to show how pissed you are')
+ex.addField('!emoji' , 'Generates random emoji from cutekaomoji.com ')
 ex.addField('!cena' ,  'AND HIS NAME IS JOHHHHHHHHN CENA')
 ex.addField('!triple' , 'Ohhhhh baby a triple')
 ex.addField('!mad' , ' Y u hef 2 b med?!?!')
